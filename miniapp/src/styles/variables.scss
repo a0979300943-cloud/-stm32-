@@ -1,0 +1,115 @@
+@use './theme.scss' as *;
+
+// ===== 間距系統（8rpx 網格） =====
+$space-1: 8rpx;
+$space-2: 16rpx;
+$space-3: 24rpx;
+$space-4: 32rpx;
+$space-5: 48rpx;
+$space-6: 64rpx;
+
+$page-padding: $space-4;          // 頁面左右邊距 32rpx
+$max-content-width: 686rpx;       // 最大內容寬度（750 - 32*2）
+
+// ===== 圓角 =====
+$radius-xs: 4rpx;
+$radius-sm: 8rpx;
+$radius-md: 16rpx;
+$radius-lg: 24rpx;
+$radius-xl: 32rpx;
+$radius-button: 48rpx;            // 全圓膠囊
+$radius-round: 999rpx;            // 完全圓形
+
+// ===== 按鈕尺寸 =====
+$button-height-sm: 64rpx;
+$button-height-md: 80rpx;
+$button-height-lg: 96rpx;
+
+// ===== 陰影 =====
+$shadow-card:        0 2rpx 12rpx rgba(0, 0, 0, 0.08);
+$shadow-card-hover:  0 4rpx 20rpx rgba(0, 224, 255, 0.12);
+$shadow-float:       0 4rpx 16rpx rgba(0, 0, 0, 0.1);
+$shadow-popup:       0 8rpx 32rpx rgba(0, 0, 0, 0.15);
+$shadow-neon:        0 0 24rpx rgba(0, 224, 255, 0.35);
+
+// ===== 動效 =====
+$transition-base: 0.2s ease;
+$transition-fast: 0.1s ease;
+
+// ===== 字體 =====
+$font-size-xs:  22rpx;
+$font-size-sm:  24rpx;
+$font-size-md:  28rpx;
+$font-size-lg:  30rpx;
+$font-size-xl:  34rpx;
+$font-size-xxl: 40rpx;
+
+// ===== 通用 Mixin =====
+
+// 單行省略
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 多行省略
+@mixin text-ellipsis-multi($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Button 樣式重置
+@mixin button-reset {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+  font-size: inherit;
+  color: inherit;
+  text-align: center;
+  &::after { border: none; }
+}
+
+// 橫向滑動容器
+@mixin scroll-x-container {
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+// 橫向滑動子項
+@mixin scroll-x-item($width) {
+  display: inline-block;
+  width: $width;
+  vertical-align: top;
+  white-space: normal;
+}
+
+// 卡片通用外觀
+@mixin card-base {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  border: 2rpx solid $color-border;
+}
+
+// flex 快捷
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

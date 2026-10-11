@@ -1,0 +1,20 @@
+@use './styles/variables.scss' as *;
+
+page {
+  height: 100%;
+  background: linear-gradient(180deg, $color-bg-page-start 0%, $color-bg-page-end 100%);
+  color: $color-text-primary;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Helvetica, "Microsoft YaHei", Arial, sans-serif;
+  font-size: $font-size-md;
+  -webkit-font-smoothing: antialiased;
+}
+
+view, text {
+  box-sizing: border-box;
+}
+
+// 禁止文字選中（按鍵、滑條）
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}

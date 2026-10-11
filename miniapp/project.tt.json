@@ -1,0 +1,10 @@
+{
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true
+  },
+  "appid": "tt1234567890123456",
+  "projectname": "stm32-car-remote"
+}

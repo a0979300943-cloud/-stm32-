@@ -1,0 +1,59 @@
+{
+  "name": "stm32-car-remote",
+  "version": "1.0.0",
+  "private": true,
+  "description": "STM32 智能車 BLE 藍牙遠程遙控小程序",
+  "templateInfo": {
+    "name": "default",
+    "typescript": true,
+    "css": "sass"
+  },
+  "scripts": {
+    "build:weapp": "taro build --type weapp",
+    "build:alipay": "taro build --type alipay",
+    "build:tt": "taro build --type tt",
+    "build:h5": "taro build --type h5",
+    "dev:weapp": "npm run build:weapp -- --watch",
+    "dev:alipay": "npm run build:alipay -- --watch",
+    "dev:tt": "npm run build:tt -- --watch",
+    "dev:h5": "npm run build:h5 -- --watch"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "Android >= 4.1",
+    "ios >= 8"
+  ],
+  "author": "",
+  "dependencies": {
+    "@babel/runtime": "^7.21.5",
+    "@tarojs/components": "4.1.9",
+    "@tarojs/helper": "4.1.9",
+    "@tarojs/plugin-framework-react": "4.1.9",
+    "@tarojs/plugin-platform-h5": "4.1.9",
+    "@tarojs/plugin-platform-weapp": "4.1.9",
+    "@tarojs/plugin-platform-alipay": "4.1.9",
+    "@tarojs/plugin-platform-tt": "4.1.9",
+    "@tarojs/react": "4.1.9",
+    "@tarojs/runtime": "4.1.9",
+    "@tarojs/shared": "4.1.9",
+    "@tarojs/taro": "4.1.9",
+    "classnames": "^2.3.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "zustand": "^4.4.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.5",
+    "@tarojs/cli": "4.1.9",
+    "@tarojs/webpack5-runner": "4.1.9",
+    "@types/react": "^18.2.0",
+    "@types/webpack-env": "^1.13.6",
+    "babel-preset-taro": "4.1.9",
+    "eslint": "^8.23.0",
+    "eslint-config-taro": "4.1.9",
+    "sass": "^1.62.1",
+    "stylelint": "^14.4.0",
+    "typescript": "^5.1.0",
+    "webpack": "5.78.0"
+  }
+}

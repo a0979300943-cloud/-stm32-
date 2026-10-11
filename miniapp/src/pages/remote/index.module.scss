@@ -1,0 +1,118 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  padding: $space-4;
+  padding-top: $space-5;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.sectionTitle {
+  font-size: $font-size-lg;
+  font-weight: 600;
+  color: $color-text-primary;
+  margin: $space-4 0 $space-3;
+  @include flex-between;
+}
+.subTitle {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  font-weight: 400;
+}
+
+.padWrap {
+  padding: $space-5 0 $space-6;
+}
+
+.funcRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $space-3;
+  margin-bottom: $space-4;
+}
+.funcBtn {
+  @include button-reset;
+  @include card-base;
+  padding: $space-4;
+  min-height: 128rpx;
+  @include flex-center;
+  flex-direction: column;
+  transition: transform $transition-fast, background $transition-fast;
+
+  &:active { transform: scale(0.97); background: $color-bg-card-hover; }
+
+  .funcTitle {
+    font-size: $font-size-lg;
+    font-weight: 600;
+    color: $color-primary;
+    margin-bottom: 6rpx;
+  }
+  .funcSub {
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+  }
+
+  &.avoid .funcTitle { color: #A78BFA; }
+  &.track .funcTitle { color: #34D399; }
+  &.ledOn   .funcTitle { color: $color-led-on; }
+  &.ledOff  .funcTitle { color: $color-text-tertiary; }
+}
+
+.manualCard {
+  @include card-base;
+  padding: $space-4;
+  margin-bottom: $space-4;
+}
+.manualLabel {
+  font-size: $font-size-md;
+  font-weight: 600;
+  color: $color-text-primary;
+  margin-bottom: $space-2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modeTag {
+  font-size: $font-size-xs;
+  padding: 6rpx 16rpx;
+  border-radius: $radius-round;
+  background: rgba(0,224,255,0.12);
+  color: $color-primary;
+}
+.manualInput {
+  background: $color-bg-input;
+  border: 2rpx solid $color-border-light;
+  border-radius: $radius-md;
+  padding: 16rpx 20rpx;
+  color: $color-text-primary;
+  font-size: $font-size-md;
+  width: 100%;
+  box-sizing: border-box;
+}
+.sendRow {
+  display: flex;
+  margin-top: $space-3;
+  gap: $space-2;
+}
+.sendBtn {
+  @include button-reset;
+  flex: 1;
+  height: $button-height-md;
+  border-radius: $radius-button;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-dark 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: $font-size-md;
+  &:active { transform: scale(0.97); opacity: 0.88; }
+}
+.smallBtn {
+  @include button-reset;
+  height: $button-height-md;
+  padding: 0 $space-4;
+  border-radius: $radius-button;
+  background: rgba(255,138,61,0.16);
+  color: $color-accent;
+  font-weight: 600;
+  font-size: $font-size-sm;
+  &:active { opacity: 0.8; }
+}

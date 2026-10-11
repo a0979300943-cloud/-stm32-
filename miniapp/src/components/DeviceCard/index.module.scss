@@ -1,0 +1,81 @@
+@use '@/styles/variables.scss' as *;
+
+.card {
+  @include card-base;
+  padding: $space-4;
+  margin-bottom: $space-3;
+  @include flex-between;
+  transition: transform $transition-fast, box-shadow $transition-fast, background $transition-fast;
+
+  &:active {
+    transform: scale(0.98);
+    background: $color-bg-card-hover;
+    box-shadow: $shadow-card-hover;
+  }
+}
+
+.left { flex: 1; min-width: 0; margin-right: $space-3; }
+.name {
+  font-size: $font-size-lg;
+  font-weight: 600;
+  color: $color-text-primary;
+  @include text-ellipsis;
+  margin-bottom: 8rpx;
+}
+.meta {
+  display: flex; gap: $space-3;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.rssiTag {
+  padding: 6rpx 16rpx;
+  border-radius: $radius-round;
+  background: rgba($color-primary, 0.12);
+  color: $color-primary;
+  font-size: $font-size-xs;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.connectedTag {
+  padding: 6rpx 16rpx;
+  border-radius: $radius-round;
+  background: rgba($color-success, 0.14);
+  color: $color-success;
+  font-size: $font-size-xs;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.right {
+  @include flex-center;
+  min-width: 120rpx;
+}
+
+.connectBtn {
+  @include button-reset;
+  height: $button-height-md;
+  padding: 0 $space-4;
+  border-radius: $radius-button;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-dark 100%);
+  color: #fff;
+  font-size: $font-size-md;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: opacity $transition-fast, transform $transition-fast;
+
+  &:active { opacity: 0.85; transform: scale(0.97); }
+}
+.disconnectBtn {
+  @include button-reset;
+  height: $button-height-md;
+  padding: 0 $space-4;
+  border-radius: $radius-button;
+  background: rgba($color-danger, 0.16);
+  color: $color-danger;
+  font-size: $font-size-md;
+  font-weight: 600;
+  white-space: nowrap;
+  &:active { opacity: 0.8; transform: scale(0.97); }
+}

@@ -1,0 +1,41 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  padding: $space-5 $space-4;
+  min-height: 100vh;
+  box-sizing: border-box;
+  @include flex-center;
+  flex-direction: column;
+}
+
+.wrap {
+  @include card-base;
+  padding: $space-6 $space-5;
+  width: 100%;
+  max-width: $max-content-width;
+  text-align: center;
+}
+.title {
+  font-size: $font-size-xl;
+  font-weight: 600;
+  color: $color-text-primary;
+  margin-bottom: $space-3;
+}
+.desc {
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+  line-height: 1.8;
+  margin-bottom: $space-5;
+}
+.backBtn {
+  @include button-reset;
+  display: inline-block;
+  height: $button-height-md;
+  padding: 0 $space-5;
+  border-radius: $radius-button;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-dark 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: $font-size-md;
+  &:active { opacity: 0.85; transform: scale(0.97); }
+}

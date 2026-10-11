@@ -1,0 +1,28 @@
+// ===== 主題配色：科技感霓虹青 =====
+$color-primary: #00E0FF;               // 霓虹青（主色）
+$color-primary-dark: #00A8CC;          // 主色按下態
+$color-primary-light: rgba(0, 224, 255, 0.15); // 主色半透明背景
+$color-accent: #FF8A3D;                // 警告橙（滑條、斷開）
+$color-success: #22C55E;               // 連接成功
+$color-danger:  #EF4444;               // 錯誤/斷開
+
+// 頁面 / 卡片 / 彈層背景
+$color-bg-page-start: #0B1020;         // 漸變起點
+$color-bg-page-end:   #131A2E;         // 漸變終點
+$color-bg-card:       #1A2238;         // 卡片背景
+$color-bg-card-hover: #223055;         // 卡片按下
+$color-bg-input:      #0F1729;         // 輸入框背景
+
+// 文字
+$color-text-primary:   #F1F5F9;        // 主文案
+$color-text-secondary: #94A3B8;        // 次要文案
+$color-text-tertiary:  #64748B;        // 輔助文案
+$color-text-disabled:  #475569;        // 禁用
+
+// 邊框 / 分隔線
+$color-border:       rgba(0, 224, 255, 0.15);
+$color-border-light: rgba(148, 163, 184, 0.12);
+
+// 業務相關
+$color-led-on:  #FACC15;
+$color-led-off: #475569;

@@ -1,0 +1,73 @@
+@use '@/styles/variables.scss' as *;
+
+.card {
+  @include card-base;
+  padding: $space-4;
+  margin-bottom: $space-3;
+}
+
+.headerRow {
+  @include flex-between;
+  margin-bottom: $space-3;
+}
+
+.statusPill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8rpx 20rpx;
+  border-radius: $radius-round;
+  font-size: $font-size-sm;
+  font-weight: 500;
+}
+
+.dot {
+  width: 14rpx; height: 14rpx; border-radius: 50%;
+  margin-right: 12rpx;
+  box-shadow: 0 0 8rpx currentColor;
+}
+
+.ready { background: rgba($color-success, 0.15); color: $color-success; }
+.connected { background: rgba($color-primary, 0.15); color: $color-primary; }
+.connecting, .scanning { background: rgba($color-accent, 0.18); color: $color-accent; }
+.error { background: rgba($color-danger, 0.15); color: $color-danger; }
+.closed { background: rgba(100,116,139, 0.2); color: $color-text-tertiary; }
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-3;
+}
+
+.infoItem {
+  background: rgba(0,0,0,0.18);
+  border: 2rpx solid $color-border-light;
+  border-radius: $radius-md;
+  padding: $space-3;
+}
+.infoLabel {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  margin-bottom: 8rpx;
+}
+.infoValue {
+  font-size: $font-size-lg;
+  font-weight: 600;
+  color: $color-text-primary;
+  @include text-ellipsis;
+}
+
+.title {
+  font-size: $font-size-xl;
+  font-weight: 600;
+  @include text-ellipsis;
+  max-width: 420rpx;
+}
+
+.speedRow {
+  margin-top: $space-3;
+}
+.speedLabel {
+  display: flex; justify-content: space-between;
+  font-size: $font-size-sm; color: $color-text-secondary;
+  margin-bottom: 8rpx;
+}

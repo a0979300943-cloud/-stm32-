@@ -1,0 +1,94 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  padding: $space-4;
+  padding-top: $space-5;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.card {
+  @include card-base;
+  padding: $space-4;
+  margin-bottom: $space-3;
+}
+.cardTitle {
+  font-size: $font-size-lg;
+  font-weight: 600;
+  color: $color-text-primary;
+  margin-bottom: $space-3;
+}
+
+.row {
+  @include flex-between;
+  padding: $space-3 0;
+  border-bottom: 2rpx solid $color-border-light;
+  &:last-child { border-bottom: none; }
+}
+.label { font-size: $font-size-md; color: $color-text-primary; }
+.subLabel { font-size: $font-size-sm; color: $color-text-tertiary; margin-top: 6rpx; }
+.leftCol { flex: 1; }
+
+.pairCard {
+  display: grid;
+  grid-template-columns: 56rpx 1fr 100rpx 100rpx;
+  gap: $space-2;
+  align-items: center;
+  padding: $space-3 0;
+  border-bottom: 2rpx solid $color-border-light;
+  &:last-child { border-bottom: none; }
+}
+.codeCell {
+  width: 56rpx; height: 56rpx; border-radius: $radius-md;
+  background: rgba($color-primary, 0.15);
+  color: $color-primary;
+  @include flex-center;
+  font-weight: 600;
+  font-size: $font-size-md;
+}
+.asciiCell {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.asciiCell, .hexCell, .labelCell {
+  font-size: $font-size-md;
+  color: $color-text-primary;
+}
+.hexCell {
+  text-align: right;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: $font-size-sm;
+  color: $color-primary;
+}
+.btnCell { text-align: right; }
+
+.dangerBtn {
+  @include button-reset;
+  height: $button-height-md;
+  padding: 0 $space-4;
+  border-radius: $radius-button;
+  background: rgba($color-danger, 0.15);
+  color: $color-danger;
+  font-weight: 600;
+  font-size: $font-size-sm;
+  &:active { opacity: 0.8; }
+}
+.ghostBtn {
+  @include button-reset;
+  height: $button-height-md;
+  padding: 0 $space-3;
+  border-radius: $radius-button;
+  background: rgba(0,224,255,0.1);
+  color: $color-primary;
+  font-weight: 600;
+  font-size: $font-size-sm;
+  &:active { opacity: 0.8; }
+}
+
+.about {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  line-height: 1.8;
+}
+.link { color: $color-primary; }

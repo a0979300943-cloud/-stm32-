@@ -1,0 +1,82 @@
+@use '@/styles/variables.scss' as *;
+
+.pad {
+  position: relative;
+  width: 520rpx;
+  height: 520rpx;
+  margin: 0 auto;
+}
+
+.base {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, rgba(0,224,255,0.15) 0%, rgba(0,224,255,0.03) 60%, transparent 80%);
+  border: 2rpx solid $color-border;
+}
+
+.btn {
+  @include button-reset;
+  position: absolute;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: $radius-round;
+  background: linear-gradient(145deg, #243159 0%, #16203e 100%);
+  border: 2rpx solid $color-border;
+  color: $color-primary;
+  @include flex-center;
+  transition: transform $transition-fast, box-shadow $transition-fast, background $transition-fast;
+  z-index: 2;
+
+  &:active {
+    transform: scale(0.93);
+    background: linear-gradient(145deg, $color-primary-dark 0%, #0e2a3c 100%);
+    box-shadow: $shadow-neon;
+    color: #fff;
+  }
+}
+
+.arrow {
+  width: 0; height: 0;
+  border-left: 26rpx solid transparent;
+  border-right: 26rpx solid transparent;
+  border-bottom: 44rpx solid currentColor;
+  display: block;
+}
+.up    { top: 0;    left: 50%; transform: translateX(-50%); }
+.down  { bottom: 0; left: 50%; transform: translateX(-50%) rotate(180deg); }
+.down:active { transform: translateX(-50%) rotate(180deg) scale(0.93); }
+
+.left  { left: 0;   top: 50%; transform: translateY(-50%) rotate(-90deg); }
+.left:active  { transform: translateY(-50%) rotate(-90deg) scale(0.93); }
+.right { right: 0;  top: 50%; transform: translateY(-50%) rotate(90deg); }
+.right:active { transform: translateY(-50%) rotate(90deg) scale(0.93); }
+
+.centerStop {
+  @include button-reset;
+  position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 160rpx; height: 160rpx;
+  border-radius: $radius-round;
+  background: linear-gradient(145deg, #ff6262 0%, #b71c1c 100%);
+  color: #fff;
+  font-size: $font-size-md;
+  font-weight: 600;
+  @include flex-center;
+  box-shadow: 0 0 24rpx rgba(239,68,68,0.35);
+  transition: transform $transition-fast, box-shadow $transition-fast;
+  z-index: 3;
+
+  &:active { transform: translate(-50%, -50%) scale(0.93); box-shadow: 0 0 36rpx rgba(239,68,68,0.6); }
+}
+
+.labelRow {
+  position: absolute;
+  bottom: -56rpx;
+  left: 0; right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8rpx;
+  color: $color-text-tertiary;
+  font-size: $font-size-xs;
+}
