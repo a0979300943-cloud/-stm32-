@@ -2,7 +2,7 @@
 
 本項目是 **Android 原生 APP（Kotlin + 經典藍牙 SPP）**，配套 STM32 智能車固件（JDY-31 / HC-05 / HC-06 等經典藍牙透傳模組，波特率 9600）實現手機遠程遙控。
 
-> 📌 對照參考：`D:\STM32F1智能小车资料（PCB版）\4.蓝牙遥控器APP\蓝牙遥控APP.apk`
+把.apk文件傳到手機上，下載下來就能用了，下面還會有說明。
 
 ---
 
@@ -169,3 +169,13 @@ android_app/
 - **targetSdk 34**（Android 14）：滿足 Google Play 上架要求
 - **ViewBinding** 已啟用，類型安全訪問 View
 - **Material Components** 主題，提供現代化視覺風格
+
+---
+
+## 使用說明
+<img width="1260" height="2502" alt="1" src="https://github.com/user-attachments/assets/1133ea0f-b141-488c-b773-76301895e310" />
+<img width="1256" height="2477" alt="2" src="https://github.com/user-attachments/assets/eb0e4081-a029-42dc-b05f-1fa2fd59074d" />
+<img width="1253" height="2520" alt="3" src="https://github.com/user-attachments/assets/df7559af-4f5c-478f-ae61-fd36c0c7a321" />
+<img width="1245" height="231" alt="4" src="https://github.com/user-attachments/assets/ad0a6a03-2b1b-408b-b24c-11debefda83d" />
+<img width="307" height="343" alt="5" src="https://github.com/user-attachments/assets/e9a87dbc-deb0-436c-9c7a-d5fdfb1df941" />
+<img width="1256" height="2523" alt="6" src="https://github.com/user-attachments/assets/53f6a5a3-3e02-4957-b2c6-6ca3a5dd9961" />
